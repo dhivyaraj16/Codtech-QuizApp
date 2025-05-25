@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Computer Science Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-wrapper">
+    <div id="access-container">
+        <h1 class="glow-text">🔥Welcome to the Ultimate CS Quiz!🔥</h1>
+        <h2> Enter the access code to begin!</h2>
+     
+      <input type="text" id="access-code" placeholder="Enter code..." />
+      <button onclick="verifyAccess()">Start</button>
+      <p id="access-error" class="error"></p>
+    </div>
+
+    <div id="settings-container" style="display:none;">
+      <h2>Enable Instant Feedback?</h2>
+      <label><input type="checkbox" id="feedback-toggle" checked /> Show feedback after answering</label>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" style="display:none;">
+      <h1> Quiz App</h1>
+      <div class="feedback-switch">
+        <label><input type="checkbox" id="live-toggle" checked /> Show instant feedback</label>
+      </div>
+      <div id="question-container">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+      <div id="feedback"></div>
+      <button id="next-btn" class="next-btn btn">Next</button>
+      <div id="score-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
